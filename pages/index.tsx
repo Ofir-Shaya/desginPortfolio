@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Alinochka | Home</title>
+        <title>Alinchka | Home</title>
         <meta
           name="description"
           content="Creative freelancer specializing in design, marketing, photography, and social media"
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Hello, I'm Alinochka</h2>
+            <h2 className="text-3xl font-bold mb-6">Hello, I'm Alinchka</h2>
             <p className="text-lg text-gray-600 mb-8">
               I help brands stand out in the digital world through strategic
               design, engaging marketing, captivating photography, and effective

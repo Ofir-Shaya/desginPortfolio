@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Alinochka | Contact</title>
+        <title>Alinchka | Contact</title>
         <meta
           name="description"
           content="Get in touch for design, marketing, photography, and social media services"

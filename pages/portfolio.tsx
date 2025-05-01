@@ -78,10 +78,10 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Alinochka | Portfolio</title>
+        <title>Alinchka | Portfolio</title>
         <meta
           name="description"
-          content="View my Alinochka featuring design, photography, marketing, and social media projects"
+          content="View my Alinchka featuring design, photography, marketing, and social media projects"
         />
       </Head>
 

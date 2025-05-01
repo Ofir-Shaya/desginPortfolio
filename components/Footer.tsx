@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Alinochka</h3>
+            <h3 className="text-xl font-bold mb-4">Alinchka</h3>
             <p className="text-gray-300">
               Helping brands stand out in the digital era with creative
               solutions.
@@ -111,7 +111,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-300">
-          <p>&copy; {currentYear} Alinochka. All rights reserved.</p>
+          <p>&copy; {currentYear} Alinchka. All rights reserved.</p>
         </div>
       </div>
     </footer>
