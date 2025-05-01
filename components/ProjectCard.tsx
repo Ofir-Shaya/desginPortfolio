@@ -16,7 +16,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
       <div className="relative h-64">
         <Image
           src={project.imageUrl}
@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             href={project.link}
             passHref
             legacyBehavior
-            className="text-primary font-medium hover:underline"
+            className="text-primary font-medium hover:underline transition-transform duration-200 hover:scale-105"
           >
             <a className="text-primary font-medium hover:underline">
               View Project

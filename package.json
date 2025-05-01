@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.5",
+    "aos": "^2.3.4",
+    "framer-motion": "^12.9.4",
+    "lucide-react": "^0.503.0",
     "next": "^14.0.0",
+    "next-seo": "^6.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^11.2.6"

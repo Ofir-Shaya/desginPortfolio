@@ -5,6 +5,7 @@
 html,
 body {
   @apply text-gray-900 bg-white;
+  scroll-behavior: smooth;
 }
 
 @layer components {

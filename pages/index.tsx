@@ -3,45 +3,64 @@ import Image from "next/image";
 import Link from "next/link";
 import ReviewCard from "../components/ReviewCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import ServiceCard from "../components/ServiceCard";
+import { useRef, useState } from "react";
 
 export default function Home() {
-  const services = [
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+  const swiperRef = useRef<any>(null);
+
+  const services: {
+    title: string;
+    description: string;
+    iconKey:
+      | "design"
+      | "marketing"
+      | "photography"
+      | "social"
+      | "interior"
+      | "planning";
+  }[] = [
     {
       title: "Graphic Design",
       description:
         "Creative visual solutions for brand identity, print materials, and digital assets.",
-      icon: "design",
+      iconKey: "design",
     },
     {
       title: "Digital Marketing",
       description:
         "Strategic campaigns that drive engagement and convert audiences.",
-      icon: "marketing",
+      iconKey: "marketing",
     },
     {
       title: "Photography",
       description:
         "Professional photography services for products, events, and portraits.",
-      icon: "photography",
+      iconKey: "photography",
     },
     {
       title: "Social Media",
       description:
         "Content creation and management to build your brand presence online.",
-      icon: "social",
+      iconKey: "social",
     },
     {
       title: "Interior Design",
       description:
         "Stylish and functional interior solutions tailored to your space and personality.",
-      icon: "design",
+      iconKey: "interior",
     },
     {
       title: "Design Planning",
       description:
         "Holistic design strategy and project planning to bring creative visions to life.",
-      icon: "design",
+      iconKey: "planning",
     },
   ];
 
@@ -53,6 +72,7 @@ export default function Home() {
           name="description"
           content="Creative freelancer specializing in design, marketing, photography, and social media"
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Hero Section */}
@@ -76,7 +96,10 @@ export default function Home() {
             <p className="text-xl mb-8">
               Design • Marketing • Photography • Social Media
             </p>
-            <Link href="/portfolio" className="btn">
+            <Link
+              href="/portfolio"
+              className="btn transition-transform duration-200 hover:scale-105"
+            >
               View My Work
             </Link>
           </div>
@@ -97,7 +120,10 @@ export default function Home() {
               with businesses of all sizes, I bring a unique creative
               perspective to every project.
             </p>
-            <Link href="/contact" className="btn">
+            <Link
+              href="/contact"
+              className="btn transition-transform duration-200 hover:scale-105"
+            >
               Let's Work Together
             </Link>
           </div>
@@ -114,90 +140,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                  {service.icon === "design" && (
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                      ></path>
-                    </svg>
-                  )}
-                  {service.icon === "marketing" && (
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
-                      ></path>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
-                      ></path>
-                    </svg>
-                  )}
-                  {service.icon === "photography" && (
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                      ></path>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
-                    </svg>
-                  )}
-                  {service.icon === "social" && (
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                      ></path>
-                    </svg>
-                  )}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <ServiceCard key={i} service={service} />
             ))}
           </div>
         </div>
@@ -213,45 +158,76 @@ export default function Home() {
             </p>
           </div>
 
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            {[
-              {
-                name: "Emma R.",
-                text: "Alina made my brand look premium. Fast, professional, and amazing style.",
-              },
-              {
-                name: "Liam K.",
-                text: "Incredible photo shoot and post-editing. My product finally stands out.",
-              },
-              {
-                name: "Sophia D.",
-                text: "Hired her for marketing visuals — results were clean, consistent, and sharp.",
-              },
-              {
-                name: "Daniel M.",
-                text: "Design planning was on point, she delivered more than expected.",
-              },
-              {
-                name: "Ava L.",
-                text: "Reliable, responsive, and easy to work with. Will hire again for sure.",
-              },
-              {
-                name: "Noah S.",
-                text: "She’s the reason our IG looks this good now. Period.",
-              },
-            ].map((review, i) => (
-              <SwiperSlide key={i}>
-                <ReviewCard review={review} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="relative">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+              }}
+              spaceBetween={30}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
+            >
+              {[
+                {
+                  name: "Emma R.",
+                  text: "Alina made my brand look premium. Fast, professional, and amazing style.",
+                },
+                {
+                  name: "Liam K.",
+                  text: "Incredible photo shoot and post-editing. My product finally stands out.",
+                },
+                {
+                  name: "Sophia D.",
+                  text: "Hired her for marketing visuals — results were clean, consistent, and sharp.",
+                },
+                {
+                  name: "Daniel M.",
+                  text: "Design planning was on point, she delivered more than expected.",
+                },
+                {
+                  name: "Ava L.",
+                  text: "Reliable, responsive, and easy to work with. Will hire again for sure.",
+                },
+                {
+                  name: "Noah S.",
+                  text: "She’s the reason our IG looks this good now. Period.",
+                },
+              ].map((review, i) => (
+                <SwiperSlide key={i}>
+                  <ReviewCard review={review} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              disabled={isBeginning}
+              className={`absolute top-1/2 left-[-30px] -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-md z-10 transition-opacity flex items-center justify-center ${
+                isBeginning
+                  ? "opacity-30 cursor-not-allowed"
+                  : "hover:bg-gray-100"
+              }`}
+            >
+              <span className="text-2xl leading-none">‹</span>
+            </button>
+
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              disabled={isEnd}
+              className={`absolute top-1/2 right-[-30px] -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-md z-10 transition-opacity flex items-center justify-center ${
+                isEnd ? "opacity-30 cursor-not-allowed" : "hover:bg-gray-100"
+              }`}
+            >
+              <span className="text-2xl leading-none">›</span>
+            </button>
+          </div>
         </div>
       </section>
 

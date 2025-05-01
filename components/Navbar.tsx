@@ -18,11 +18,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white shadow-md">
       <div className="container-custom">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-primary">
+            <Link
+              href="/"
+              className="text-xl font-bold text-primary transition-transform duration-200 hover:scale-105"
+            >
               Alinchka
             </Link>
           </div>
