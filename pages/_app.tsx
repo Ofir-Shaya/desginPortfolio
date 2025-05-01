@@ -11,12 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Alinchka showcasing design, marketing, photography, and social media work"
+          content="Alinachka showcasing design, marketing, photography, and social media work"
         />
-        <meta property="og:title" content="Alinchka" />
+        <meta property="og:title" content="Alinachka" />
         <meta
           property="og:description"
-          content="Alinchka showcasing design, marketing, photography, and social media work"
+          content="Alinachka showcasing design, marketing, photography, and social media work"
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/og-image.jpg" />
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:url"
           content="https://creative-portfolio.vercel.app"
         />
-        <title>Alinchka</title>
+        <title>Alinachka</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col min-h-screen">

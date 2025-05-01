@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm("xpzgojke"); // Replace with your Formspree form ID
+  const [state, handleSubmit] = useForm("xpwdpajj"); // Replace with your Formspree form ID
   const [formData, setFormData] = useState({
     name: "",
     email: "",

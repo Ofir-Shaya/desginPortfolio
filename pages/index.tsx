@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Alinchka | Home</title>
+        <title>Alinachka | Home</title>
         <meta
           name="description"
           content="Creative freelancer specializing in design, marketing, photography, and social media"
@@ -87,7 +87,9 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Hello, I'm Alinchka</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              Hello, I'm Alina Shipovalova
+            </h2>
             <p className="text-lg text-gray-600 mb-8">
               I help brands stand out in the digital world through strategic
               design, engaging marketing, captivating photography, and effective
@@ -207,7 +209,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Clients Say</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Honest feedback from past clients and collaborators
+              Genuine feedback from happy clients
             </p>
           </div>
 
@@ -222,19 +224,27 @@ export default function Home() {
             {[
               {
                 name: "Emma R.",
-                text: "Alina transformed our brand visuals and social media presence. Super professional and creative.",
+                text: "Alina made my brand look premium. Fast, professional, and amazing style.",
               },
               {
                 name: "Liam K.",
-                text: "Outstanding photography and design sense. Highly recommend her for any freelance project.",
+                text: "Incredible photo shoot and post-editing. My product finally stands out.",
               },
               {
                 name: "Sophia D.",
-                text: "We hired Alina for design planning and she nailed it — beautiful work and easy to collaborate with.",
+                text: "Hired her for marketing visuals — results were clean, consistent, and sharp.",
               },
               {
                 name: "Daniel M.",
-                text: "One of the best creative freelancers I’ve worked with. Punctual, talented, and friendly.",
+                text: "Design planning was on point, she delivered more than expected.",
+              },
+              {
+                name: "Ava L.",
+                text: "Reliable, responsive, and easy to work with. Will hire again for sure.",
+              },
+              {
+                name: "Noah S.",
+                text: "She’s the reason our IG looks this good now. Period.",
               },
             ].map((review, i) => (
               <SwiperSlide key={i}>

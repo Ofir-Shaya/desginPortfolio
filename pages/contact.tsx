@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Alinchka | Contact</title>
+        <title>Alinachka | Contact</title>
         <meta
           name="description"
           content="Get in touch for design, marketing, photography, and social media services"
@@ -44,7 +44,7 @@ export default function Contact() {
                   </div>
                   <div className="ml-3">
                     <h3 className="text-lg font-semibold">Email</h3>
-                    <p className="text-gray-600">alinashipo@gmail.com</p>
+                    <p className="text-gray-600">contact@alinachka.com</p>
                   </div>
                 </div>
 

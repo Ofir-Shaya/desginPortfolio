@@ -1,4 +1,4 @@
-# Alinchka Website
+# Alinachka Website
 
 A modern portfolio website for a creative freelancer working in design, marketing, photography, and social media.
 
