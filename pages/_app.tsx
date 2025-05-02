@@ -69,13 +69,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         </motion.div>
       </AnimatePresence>
       <DefaultSeo {...SEO} />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Component {...pageProps} />
-        </main>
-        <Footer />
-      </div>
     </>
   );
 }
