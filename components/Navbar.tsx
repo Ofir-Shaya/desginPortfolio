@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import socialLinks from "./lib/socialLinks";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
@@ -28,6 +28,20 @@ const Navbar = () => {
             >
               Alinchka
             </Link>
+            <div className="flex space-x-4 items-center ml-3">
+              {socialLinks.map(({ name, url, icon }) => (
+                <a
+                  key={name}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 transition-colors hover:text-primary transition"
+                  aria-label={name}
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Desktop menu */}
