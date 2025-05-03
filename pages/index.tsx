@@ -31,11 +31,22 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <div className="flex flex-col min-h-screen">
             <main className="flex-grow">
               {/* Hero Section (Wide) */}
-              <section className="w-full min-h-[80vh] bg-black text-white flex items-center justify-center text-center">
-                <h1 className="text-5xl md:text-7xl font-bold">
-                  Bringing Your Vision to Life
-                </h1>
+              <section className="w-full min-h-[80vh] relative text-white flex items-center justify-center text-center">
+                <div className="absolute inset-0">
+                  <img
+                    src="/images/banner.jpg"
+                    alt="Hero Background"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-60" />
+                </div>
+                <div className="relative z-10 px-4">
+                  <h1 className="text-5xl md:text-7xl font-bold">
+                    Bringing Your Vision to Life
+                  </h1>
+                </div>
               </section>
+
               {/* Mission (Narrow) */}
               <section className="bg-gray-50">
                 <div className="relative px-4 py-20 mx-auto max-w-xl text-center">

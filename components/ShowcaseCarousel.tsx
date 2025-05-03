@@ -33,13 +33,12 @@ export default function ShowcaseCarousel() {
       >
         {images.map((src, i) => (
           <SwiperSlide key={i}>
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 aspect-[3/2]">
               <Image
                 src={src}
                 alt={`Slide ${i + 1}`}
-                width={1200}
-                height={800}
-                className="w-full h-auto object-cover"
+                fill
+                className="w-full h-full object-cover"
               />
             </div>
           </SwiperSlide>
