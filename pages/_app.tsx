@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -59,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen bg-white text-gray-900 dark:bg-indigo-950 dark:text-indigo-100 transition-colors duration-300">
             <Navbar />
             <main className="flex-grow">
               <Component {...pageProps} />
